@@ -1,9 +1,9 @@
 # Visualizacion de Datos con Power BI
 
-📝 Contexto
+## 📝 Contexto
 En el ámbito profesional, enfrentarse a pruebas técnicas es una experiencia común para los candidatos en roles relacionados con análisis de datos y programación. Estas pruebas, diseñadas para evaluar habilidades prácticas, suelen incluir tareas como desarrollar gráficos interactivos y analizar bases de datos. Este proyecto surge de una prueba técnica realizada para el Ministerio de Educación de Chile (MINEDUC), en la que se evaluaron mis habilidades en programación con R y visualización de datos mediante Power BI enfocándose en la desvinculación de estudiantes en establecimientos particulares subvencionados. La intención de compartir este proyecto en GitHub es mostrar cómo abordar este tipo de desafíos, aplicando buenas prácticas en análisis y visualización de datos.
 
-📋 Descripción del Proyecto
+## 📋 Descripción del Proyecto
 El proyecto consiste en una serie de análisis enfocados en responder preguntas específicas sobre desvinculación escolar, utilizando datos reales del sistema educativo chileno. La metodología incluye:
 
 1) Procesamiento y análisis de bases de datos en R.
@@ -13,10 +13,10 @@ El proyecto consiste en una serie de análisis enfocados en responder preguntas 
 
 Las tareas realizadas buscan no solo cumplir con los requerimientos de la prueba técnica, sino también generar insights que puedan informar políticas públicas relacionadas con la educación.
 
-🎯 Ojetivo del Proyecto
+## 🎯 Ojetivo del Proyecto
 El objetivo de este proyecto es analizar y visualizar datos relacionados con la desvinculación escolar en establecimientos particulares subvencionados de Chile, utilizando herramientas como R y Power BI para extraer métricas clave, generar visualizaciones interactivas y proponer acciones basadas en los hallazgos.
 
-💡 Desarrollo del Proyecto
+## 💡 Desarrollo del Proyecto
 El proyecto se desarrolló en las siguientes fases:
 
 Fase 1: Carga y exploración de datos

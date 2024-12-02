@@ -8,10 +8,10 @@ Este proyecto surge de una prueba técnica realizada para el Ministerio de Educa
 ## 📋 Descripción del Proyecto
 El proyecto consiste en una serie de análisis enfocados en responder preguntas específicas sobre desvinculación escolar, utilizando datos reales del sistema educativo chileno. La metodología incluye:
 
-1) Procesamiento y análisis de bases de datos en R.
-2) Cálculos de métricas clave como matrícula teórica, número de estudiantes desvinculados y tasas de desvinculación por región.
-3) Creación de visualizaciones interactivas en Power BI para una mejor interpretación de los resultados.
-4) Propuesta de acciones basadas en los hallazgos, utilizando principios de análisis descriptivo y predictivo.
+- Procesamiento y análisis de bases de datos en R.
+- Cálculos de métricas clave como matrícula teórica, número de estudiantes desvinculados y tasas de desvinculación por región.
+- Creación de visualizaciones interactivas en Power BI para una mejor interpretación de los resultados.
+- Propuesta de acciones basadas en los hallazgos, utilizando principios de análisis descriptivo y predictivo.
 
 Las tareas realizadas buscan no solo cumplir con los requerimientos de la prueba técnica, sino también generar insights que puedan informar políticas públicas relacionadas con la educación.
 

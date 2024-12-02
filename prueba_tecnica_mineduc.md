@@ -2,82 +2,53 @@
 
 Como se mencionó en la descripción del proyecto:
 
-La presente evaluación técnica tiene como objetivo medir el manejo y
-tratamiento de bases de datos, el conocimiento en materias de educación
-y la capacidad de análisis que poseen los postulantes al cargo
-Profesional Analista en la Unidad de Ciencia de Datos del Centro de
-Estudios del Ministerio de Educación.
+La presente evaluación técnica tiene como objetivo medir el manejo y tratamiento de bases de datos, el conocimiento en materias de educación y la capacidad de análisis que poseen los postulantes al cargo Profesional Analista en la Unidad de Ciencia de Datos del Centro de Estudios del Ministerio de Educación.
 
-Esta prueba técnica debe desarrollarla utilizando el lenguaje de
-programación R y Powerbi. Se recomienda leer detenidamente las
-siguientes instrucciones y los productos solicitados:
+Esta prueba técnica debe desarrollarla utilizando el lenguaje de programación R y Powerbi. Se recomienda leer detenidamente las siguientes instrucciones y los productos solicitados:
 
 ### Carga y exploración de datos
-
+```r
     rendimiento <- read_csv("databases/rendimiento_2023.csv")
-
-    ## Rows: 1935785 Columns: 37
-    ## ── Column specification ──────────────────────────────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr  (8): NOM_RBD, NOM_REG_RBD_A, NOM_COM_RBD, NOM_DEPROV_RBD, LET_CUR, NOM_COM_ALU, SIT_FIN, SIT_FIN_R
-    ## dbl (28): AGNO, RBD, DGV_RBD, COD_REG_RBD, COD_PRO_RBD, COD_COM_RBD, COD_DEPROV_RBD, COD_DEPE, COD_DEP...
-    ## num  (1): PROM_GRAL
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
+```
+```r
     matricula <- read_csv2("databases/20240913_Matrícula_unica_2024_20240430_WEB.CSV")
-
-    ## ℹ Using "','" as decimal and "'.'" as grouping mark. Use `read_delim()` for more control.
-
-    ## Rows: 3582943 Columns: 37
-    ## ── Column specification ──────────────────────────────────────────────────────────────────────────────────
-    ## Delimiter: ";"
-    ## chr  (7): NOM_RBD, NOM_REG_RBD_A, NOM_COM_RBD, NOM_DEPROV_RBD, NOMBRE_SLEP, LET_CUR, NOM_COM_ALU
-    ## dbl (30): AGNO, RBD, DGV_RBD, COD_REG_RBD, COD_PRO_RBD, COD_COM_RBD, COD_DEPROV_RBD, COD_DEPE, COD_DEP...
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
+```
+    
 ### Procesamiento de datos y Cálculos principales:
 
 **a) Numero de estudiantes desvinculados periodo 23-24**
 
-Filtramos establecimientos particulares subvencionados para el
-respectivo año:
+Filtramos establecimientos particulares subvencionados para el respectivo año:
 
+```r
     rendimiento_filtrado <- filter(rendimiento, COD_DEPE == 3 & AGNO == 2023)
-
-
-    ``` r
+```
+```r
     matricula_filtrada <- filter(matricula, COD_DEPE == 3 & AGNO == 2024)
+```
+Los estudiantes Desvinculados, son aquellos que estaban presentes en la base de rendimiento de 2023 pero no aparecen en la matrícula de 2024. Para eso debemos hacer un **ANTIJOIN** entre ambas bases:
 
-Los estudiantes Desvinculados, son aquellos que estaban presentes en la
-base de rendimiento de 2023 pero no aparecen en la matrícula de 2024.
-Para eso debemos hacer un **ANTIJOIN** entre ambas bases:
-
+```r
     desvinculados <- anti_join(rendimiento_filtrado, matricula_filtrada, by = "MRUN")
-
+```
+```r
     numero_desvinculados <- nrow(desvinculados)
+```
+Entonces, el total de registros que están presentes en la base de rendimiento del año t-1 (2023), pero no aparecen en la base de matrícula del año t (2024), serían los estudiantes desvinculados en el periodo.
 
-Entonces, el total de registros que están presentes en la base de
-rendimiento del año t-1 (2023), pero no aparecen en la base de matrícula
-del año t (2024), serían los estudiantes desvinculados en el periodo.
-
+```r
     print(numero_desvinculados)
-
+```
     ## [1] 348749
 
-Hasta acá todo bien, pero luego de haber revisado con mayor detalle me
-doy cuenta que existen **MRUN** duplicados por lo que debemos
-eliminarlos, ya que existen estudiantes que están siendo contados más de
-una vez.
+Hasta acá todo bien, pero luego de haber revisado con mayor detalle me doy cuenta que existen **MRUN** duplicados por lo que debemos eliminarlos, ya que existen estudiantes que están siendo contados más de una vez.
 
+```r
     RUN_duplicados <- desvinculados %>%
       group_by(MRUN) %>%
       filter(n() > 1) %>%
       count()
-
+```
     desvinculados <- desvinculados %>%
       distinct(MRUN, .keep_all = TRUE)
 

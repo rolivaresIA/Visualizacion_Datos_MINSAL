@@ -5,6 +5,8 @@ En el ámbito profesional, enfrentarse a pruebas técnicas es una experiencia co
 
 Este proyecto surge de una prueba técnica realizada para el Ministerio de Educación de Chile (MINEDUC), en la que se evaluaron mis habilidades en programación con R y visualización de datos mediante Power BI enfocándose en la desvinculación de estudiantes en establecimientos particulares subvencionados. La intención de compartir este proyecto en GitHub es mostrar cómo abordar este tipo de desafíos, aplicando buenas prácticas en análisis y visualización de datos.
 
+![](images/Logo_del_Ministerio_de_Educación_Chile1.jpg)
+
 ## 📋 Descripción del Proyecto
 El proyecto consiste en una serie de análisis enfocados en responder preguntas específicas sobre desvinculación escolar, utilizando datos reales del sistema educativo chileno. La metodología incluye:
 
@@ -13,7 +15,13 @@ El proyecto consiste en una serie de análisis enfocados en responder preguntas 
 - Creación de visualizaciones interactivas en Power BI para una mejor interpretación de los resultados.
 - Propuesta de acciones basadas en los hallazgos, utilizando principios de análisis descriptivo y predictivo.
 
-Las tareas realizadas buscan no solo cumplir con los requerimientos de la prueba técnica, sino también generar insights que puedan informar políticas públicas relacionadas con la educación.
+Es por esto, que la ruta correcta para ver este proyecto es:
+
+1. En la carpeta **pdf** se presenta la [Evaluación Técnica](pdf/Evaluación_Técnica-Analista_UCD.pdf) con sus respectivas actividades.
+2. Obtención de bases de datos: Una vez entendida la actividad, descargamos las bases del siguiente [link](https://drive.google.com/drive/folders/1DT-R1INN3gBh_n6K-IE5SXYyp9DMSnBl?usp=drive_link).
+3. Procesamiento, análisis y cálculo de métricas solicitadas se pueden ver con detalle en el archivo [README](prueba_tecnica_mineduc.md) y de manera complementaria se puede descargar el [script](script/script_respaldo.R).R.
+4. Análisis del panel o gráficos interactivos a través del archivo [.pbix]() de Power BI.
+5. Análisis descriptivo y propuestas de acciones en el archivo de [Análisis_Descriptivo_Datos.pdf](pdf/Análisis_Descriptivo_Datos.pdf).
 
 ## 🎯 Ojetivo del Proyecto
 El objetivo de este proyecto es analizar y visualizar datos relacionados con la desvinculación escolar en establecimientos particulares subvencionados de Chile, utilizando herramientas como R y Power BI para extraer métricas clave, generar visualizaciones interactivas y proponer acciones basadas en los hallazgos.

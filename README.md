@@ -19,7 +19,7 @@ Es por esto, que la ruta correcta para ver este proyecto es:
 
 1. En la carpeta **pdf** se presenta la [Evaluación Técnica](pdf/Evaluación_Técnica-Analista_UCD.pdf) con sus respectivas actividades.
 2. Obtención de bases de datos: Una vez entendida la actividad, descargamos las bases del siguiente [link](https://drive.google.com/drive/folders/1DT-R1INN3gBh_n6K-IE5SXYyp9DMSnBl?usp=drive_link).
-3. Procesamiento, análisis y cálculo de métricas solicitadas se pueden ver con detalle en el archivo [README](prueba_tecnica_mineduc.md) y de manera complementaria se puede descargar el [script](script/script_respaldo.R).R.
+3. Procesamiento, análisis y cálculo de métricas solicitadas se pueden ver con detalle en el archivo [README](prueba_tecnica_mineduc.md) y de manera complementaria se puede descargar el [script](script/script_respaldo.R).
 4. Análisis del panel o gráficos interactivos a través del archivo [.pbix]() de Power BI.
 5. Análisis descriptivo y propuestas de acciones en el archivo de [Análisis_Descriptivo_Datos.pdf](pdf/Análisis_Descriptivo_Datos.pdf).
 

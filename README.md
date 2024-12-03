@@ -35,6 +35,7 @@ El proyecto se desarrolló en las siguientes fases:
 - Exploración inicial de los datos para identificar inconsistencias y valores nulos.
   
 **Fase 2: Procesamiento de datos**
+
 Cálculos principales:
 - Número de estudiantes desvinculados (2023-2024).
 - Matrícula teórica y tasa de desvinculación por región.
@@ -42,6 +43,7 @@ Cálculos principales:
 - Procesamiento de los datos en R para obtener tablas resumen y métricas clave.
 
 **Fase 3: Visualización en Power BI**
+
 Creación de un dashboard interactivo que incluye:
 - Gráfico de barras con estudiantes desvinculados por región.
 - Gráfico con porcentajes de desvinculación por región.
